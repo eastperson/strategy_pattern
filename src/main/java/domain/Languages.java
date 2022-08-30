@@ -1,5 +1,7 @@
 package domain;
 
+import domain.curriculum.CurriculumStrategy;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,9 @@ public class Languages {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Languages languages)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Languages languages = (Languages) o;
 
         return languageList.equals(languages.languageList);
     }
@@ -26,5 +30,11 @@ public class Languages {
     @Override
     public int hashCode() {
         return languageList.hashCode();
+    }
+
+    public void addSkill(Skill skill, CurriculumStrategy curriculumStrategy) {
+        this.getLanguageList().forEach(languageType ->
+                skill.add(curriculumStrategy.learn(languageType))
+        );
     }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="domain.DeveloperTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-08-30T15:17:40" hostname="DESKTOP-MRB3AOK" time="0.078">
+  <properties/>
+  <testcase name="자바 개발자가 백엔드 커리큘럼을 배우면 백엔드 개발자가 된다." classname="domain.DeveloperTest" time="0.067"/>
+  <testcase name="함수형 프로그래밍 -&gt; 인자로 매개변수로 JSP 만 배워!" classname="domain.DeveloperTest" time="0.003"/>
+  <testcase name="개발자는 최소 하나 이상의 언어를 할 줄 안다." classname="domain.DeveloperTest" time="0.001"/>
+  <testcase name="GO 개발자가 프론트 커리큘럼을 배우면 프론트엔드 개발자가 되지못한다." classname="domain.DeveloperTest" time="0.005"/>
+  <testcase name="JS 개발자가 프론트엔드 커리큘럼을 배우면 프론트엔드 개발자가 된다." classname="domain.DeveloperTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

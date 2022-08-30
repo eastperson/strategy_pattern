@@ -11,7 +11,7 @@ import java.util.List;
 public class FrontendCurriculumStrategy implements CurriculumStrategy {
     @Override
     public Skill learn(LanguageType languageType) {
-        List<FrontendFramework> list = new ArrayList();
+        List<FrontendFramework> list;
         switch (languageType) {
             case JAVA -> list = FrontendFramework.JavaFrontendFrameworks();
             case JAVASCRIPT -> list = FrontendFramework.JavascriptFrontendFrameworks();

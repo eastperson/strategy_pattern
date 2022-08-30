@@ -21,20 +21,23 @@ public class Developer {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Developer developer)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
 
-        return languages.equals(developer.languages);
+        Developer developer = (Developer) o;
+
+        if (!languages.equals(developer.languages)) return false;
+        return skill.equals(developer.skill);
     }
 
     @Override
     public int hashCode() {
-        return languages.hashCode();
+        int result = languages.hashCode();
+        result = 31 * result + skill.hashCode();
+        return result;
     }
 
     public void learn(CurriculumStrategy curriculumStrategy) {
-        this.languages.getLanguageList().forEach(languageType -> {
-            this.skill.add(curriculumStrategy.learn(languageType));
-        });
+        this.languages.addSkill(this.skill, curriculumStrategy);
     }
 
     public boolean isBackendDeveloper() {
